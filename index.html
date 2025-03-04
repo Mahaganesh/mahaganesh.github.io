@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         * {
             margin: 0;
@@ -16,6 +17,36 @@
             background: #0f0f0f;
             color: #fff;
             overflow-x: hidden;
+        }
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-brand img {
+            width: 50px;
+        }
+        .header-links ul {
+            display: flex;
+            list-style: none;
+        }
+        .header-links li {
+            margin: 0 15px;
+        }
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .header-links a:hover {
+            color: #00ffcc;
         }
         .hero {
             height: 100vh;
@@ -53,7 +84,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 50px;
+            margin-top: 100px;
             padding: 40px 0;
         }
         .section {
@@ -90,6 +121,18 @@
     </style>
 </head>
 <body>
+    <div class="nav-header">
+        <div class="nav-brand">
+            <img src="https://assets.grok.com/users/4713d46d-6f6d-4fe8-a385-be864b3291d4/CssJTfSGaPfO80cm-generated_image.jpg" alt="Logo">
+        </div>
+        <div class="header-links">
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="hero">
         <h1>Maha Ganesh</h1>
         <h2>Automation Tester | Developer | Tech Enthusiast</h2>
@@ -100,25 +143,31 @@
         </div>
     </div>
     <div class="sections">
-        <div class="section">
-            <h3>Experience</h3>
-            <p>Automation Tester at LTI Mindtree</p>
-            <p>Previously at Full Creative & Alpha Adventise</p>
+        <div class="section" id="about">
+            <h3>About Me</h3>
+            <p>A highly detail-oriented QA professional with expertise in automation testing, test planning, and debugging complex applications.</p>
+            <p>Extensive experience in crafting test strategies, reviewing test cases, and executing automation frameworks.</p>
         </div>
-        <div class="section">
-            <h3>Skills</h3>
-            <p>Playwright, WebdriverIO, JavaScript, Python</p>
-            <p>Manual & Automated Testing, JIRA, QASE</p>
-        </div>
-        <div class="section">
+        <div class="section" id="portfolio">
             <h3>Projects</h3>
             <p>Setmore, AnswerConnect, Anywhere.app</p>
             <a href="#" class="btn">View Projects</a>
         </div>
-        <div class="section">
+        <div class="section" id="skills">
+            <h3>Skills</h3>
+            <p>Playwright, WebdriverIO, JavaScript, Python, TypeScript</p>
+            <p>Manual & Automated Testing, JIRA, QASE, Postman</p>
+            <p>Test Planning & Execution, Bug Tracking, Root Cause Analysis</p>
+        </div>
+        <div class="section" id="achievements">
             <h3>Achievements</h3>
-            <p>Reduced defects by 75%, led major migrations</p>
-            <p>Improved user experience & system efficiency</p>
+            <p>Reduced defects by 75% through rigorous testing procedures.</p>
+            <p>Played a key role in migrating over 20,000 accounts within 3 months.</p>
+            <p>Enhanced user experience by implementing multi-account login.</p>
+        </div>
+        <div class="section" id="contact">
+            <h3>Contact</h3>
+            <p>Let's collaborate! Reach out to me via LinkedIn or email.</p>
         </div>
     </div>
 </body>
